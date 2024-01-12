@@ -30,8 +30,6 @@ Go to the link below for installation if you don't have installed yet.
 ## Set Up The Environment
 
 1. download the repository
-   ![](./src/img/docs/download.png)
-
 2. unzip folder and open it with [VS Code](https://code.visualstudio.com/)
 3. Open terminal `Ctrl`+`'` & install dependencies by running `npm install` command
 4. Run the command `npm run dev` to start live server
