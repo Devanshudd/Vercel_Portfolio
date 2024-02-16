@@ -68,11 +68,33 @@ const IP_API_KEY = import.meta.env.VITE_IP_API_KEY
 const IP_API = `https://api.ipregistry.co/?key=${IP_API_KEY}`
 const EMAIL_API = 'https://api.emailjs.com/api/v1.0/email/send'
 
+
+function sendMessage() {
+  // Simulate sending message
+  // You can replace this with your actual logic for sending a message
+  console.log("hello1");
+  // Disable the button to prevent multiple clicks
+  document.getElementById("send").disabled = true;
+
+  // Show the spinner
+  document.getElementById("spinner").style.display = "block";
+
+  // Simulate a delay (you can replace this with your actual asynchronous message sending code)
+  setTimeout(function () {
+      // Hide the spinner
+      document.getElementById("spinner").style.display = "none";
+
+      // Show the success message
+      document.getElementById("spinner").classList.add("visually-shown");
+  }, 2000); // Replace 2000 with the actual delay in milliseconds
+}
+
+
 async function sendEmail(e) {
   e.preventDefault()
   submitButton.style.display = 'none'
-  spinner.style.display = 'inline-block'
-
+  spinner.style.display = 'none'
+  thanksMessage.style.display= 'block'
   // Get client location
   let location
   await fetch(IP_API)
