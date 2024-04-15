@@ -41,7 +41,8 @@
     }
 
     span {
-      font-style: italic;
+      // font-style: italic;
+      @include font-primary;
       font-weight: 500;
       margin-left: 0.5rem;
     }
